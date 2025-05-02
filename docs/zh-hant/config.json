@@ -1,0 +1,258 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TanStack/tanstack.com/main/tanstack-docs-config.schema.json",
+  "docSearch": {
+    "appId": "",
+    "indexName": "",
+    "apiKey": ""
+  },
+  "sections": [
+    {
+      "label": "開始使用",
+      "children": [
+        {
+          "label": "介紹",
+          "to": "introduction"
+        },
+        {
+          "label": "安裝",
+          "to": "installation"
+        }
+      ],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "React Virtual",
+              "to": "framework/react/react-virtual"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "Angular Virtual",
+              "to": "framework/angular/angular-virtual"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "Solid Virtual",
+              "to": "framework/solid/solid-virtual"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "Svelte Virtual",
+              "to": "framework/svelte/svelte-virtual"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "Vue Virtual",
+              "to": "framework/vue/vue-virtual"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "核心 API",
+      "children": [
+        {
+          "label": "虛擬化器 (Virtualizer)",
+          "to": "api/virtualizer"
+        },
+        {
+          "label": "虛擬項目 (VirtualItem)",
+          "to": "api/virtual-item"
+        }
+      ]
+    },
+    {
+      "label": "範例",
+      "children": [],
+      "frameworks": [
+        {
+          "label": "angular",
+          "children": [
+            {
+              "to": "framework/angular/examples/fixed",
+              "label": "固定 (Fixed)"
+            },
+            {
+              "to": "framework/angular/examples/variable",
+              "label": "可變 (Variable)"
+            },
+            {
+              "to": "framework/angular/examples/dynamic",
+              "label": "動態 (Dynamic)"
+            },
+            {
+              "to": "framework/angular/examples/padding",
+              "label": "填充 (Padding)"
+            },
+            {
+              "to": "framework/angular/examples/sticky",
+              "label": "黏性 (Sticky)"
+            },
+            {
+              "to": "framework/angular/examples/infinite-scroll",
+              "label": "無限滾動 (Infinite Scroll)"
+            },
+            {
+              "to": "framework/angular/examples/smooth-scroll",
+              "label": "平滑滾動 (Smooth Scroll)"
+            },
+            {
+              "to": "framework/angular/examples/table",
+              "label": "表格 (Table)"
+            },
+            {
+              "to": "framework/angular/examples/window",
+              "label": "視窗 (Window)"
+            }
+          ]
+        },
+        {
+          "label": "react",
+          "children": [
+            {
+              "to": "framework/react/examples/fixed",
+              "label": "固定 (Fixed)"
+            },
+            {
+              "to": "framework/react/examples/variable",
+              "label": "可變 (Variable)"
+            },
+            {
+              "to": "framework/react/examples/dynamic",
+              "label": "動態 (Dynamic)"
+            },
+            {
+              "to": "framework/react/examples/padding",
+              "label": "填充 (Padding)"
+            },
+            {
+              "to": "framework/react/examples/sticky",
+              "label": "黏性 (Sticky)"
+            },
+            {
+              "to": "framework/react/examples/infinite-scroll",
+              "label": "無限滾動 (Infinite Scroll)"
+            },
+            {
+              "to": "framework/react/examples/smooth-scroll",
+              "label": "平滑滾動 (Smooth Scroll)"
+            },
+            {
+              "to": "framework/react/examples/table",
+              "label": "表格 (Table)"
+            },
+            {
+              "to": "framework/react/examples/window",
+              "label": "視窗 (Window)"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "to": "framework/svelte/examples/fixed",
+              "label": "固定 (Fixed)"
+            },
+            {
+              "to": "framework/svelte/examples/variable",
+              "label": "可變 (Variable)"
+            },
+            {
+              "to": "framework/svelte/examples/dynamic",
+              "label": "動態 (Dynamic)"
+            },
+            {
+              "to": "framework/svelte/examples/sticky",
+              "label": "黏性 (Sticky)"
+            },
+            {
+              "to": "framework/svelte/examples/infinite-scroll",
+              "label": "無限滾動 (Infinite Scroll)"
+            },
+            {
+              "to": "framework/svelte/examples/smooth-scroll",
+              "label": "平滑滾動 (Smooth Scroll)"
+            },
+            {
+              "to": "framework/svelte/examples/table",
+              "label": "表格 (Table)"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "to": "framework/vue/examples/fixed",
+              "label": "固定 (Fixed)"
+            },
+            {
+              "to": "framework/vue/examples/variable",
+              "label": "可變 (Variable)"
+            },
+            {
+              "to": "framework/vue/examples/dynamic",
+              "label": "動態 (Dynamic)"
+            },
+            {
+              "to": "framework/vue/examples/sticky",
+              "label": "黏性 (Sticky)"
+            },
+            {
+              "to": "framework/vue/examples/infinite-scroll",
+              "label": "無限滾動 (Infinite Scroll)"
+            },
+            {
+              "to": "framework/vue/examples/smooth-scroll",
+              "label": "平滑滾動 (Smooth Scroll)"
+            },
+            {
+              "to": "framework/vue/examples/table",
+              "label": "表格 (Table)"
+            },
+            {
+              "to": "framework/vue/examples/padding",
+              "label": "填充 (Padding)"
+            },
+            {
+              "to": "framework/vue/examples/scroll-padding",
+              "label": "滾動填充 (Scroll Padding)"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "to": "framework/lit/examples/fixed",
+              "label": "固定 (Fixed)"
+            },
+            {
+              "to": "framework/lit/examples/dynamic",
+              "label": "動態 (Dynamic)"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
