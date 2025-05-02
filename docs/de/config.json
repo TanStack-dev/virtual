@@ -1,0 +1,258 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TanStack/tanstack.com/main/tanstack-docs-config.schema.json",
+  "docSearch": {
+    "appId": "",
+    "indexName": "",
+    "apiKey": ""
+  },
+  "sections": [
+    {
+      "label": "Erste Schritte",
+      "children": [
+        {
+          "label": "Einführung",
+          "to": "introduction"
+        },
+        {
+          "label": "Installation",
+          "to": "installation"
+        }
+      ],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "React Virtual",
+              "to": "framework/react/react-virtual"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "Angular Virtual",
+              "to": "framework/angular/angular-virtual"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "Solid Virtual",
+              "to": "framework/solid/solid-virtual"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "Svelte Virtual",
+              "to": "framework/svelte/svelte-virtual"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "Vue Virtual",
+              "to": "framework/vue/vue-virtual"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Kern-APIs",
+      "children": [
+        {
+          "label": "Virtualizer",
+          "to": "api/virtualizer"
+        },
+        {
+          "label": "VirtualItem",
+          "to": "api/virtual-item"
+        }
+      ]
+    },
+    {
+      "label": "Beispiele",
+      "children": [],
+      "frameworks": [
+        {
+          "label": "angular",
+          "children": [
+            {
+              "to": "framework/angular/examples/fixed",
+              "label": "Fest"
+            },
+            {
+              "to": "framework/angular/examples/variable",
+              "label": "Variabel"
+            },
+            {
+              "to": "framework/angular/examples/dynamic",
+              "label": "Dynamisch"
+            },
+            {
+              "to": "framework/angular/examples/padding",
+              "label": "Polsterung"
+            },
+            {
+              "to": "framework/angular/examples/sticky",
+              "label": "Fixiert"
+            },
+            {
+              "to": "framework/angular/examples/infinite-scroll",
+              "label": "Unendliches Scrollen"
+            },
+            {
+              "to": "framework/angular/examples/smooth-scroll",
+              "label": "Sanftes Scrollen"
+            },
+            {
+              "to": "framework/angular/examples/table",
+              "label": "Tabelle"
+            },
+            {
+              "to": "framework/angular/examples/window",
+              "label": "Fenster"
+            }
+          ]
+        },
+        {
+          "label": "react",
+          "children": [
+            {
+              "to": "framework/react/examples/fixed",
+              "label": "Fest"
+            },
+            {
+              "to": "framework/react/examples/variable",
+              "label": "Variabel"
+            },
+            {
+              "to": "framework/react/examples/dynamic",
+              "label": "Dynamisch"
+            },
+            {
+              "to": "framework/react/examples/padding",
+              "label": "Polsterung"
+            },
+            {
+              "to": "framework/react/examples/sticky",
+              "label": "Fixiert"
+            },
+            {
+              "to": "framework/react/examples/infinite-scroll",
+              "label": "Unendliches Scrollen"
+            },
+            {
+              "to": "framework/react/examples/smooth-scroll",
+              "label": "Sanftes Scrollen"
+            },
+            {
+              "to": "framework/react/examples/table",
+              "label": "Tabelle"
+            },
+            {
+              "to": "framework/react/examples/window",
+              "label": "Fenster"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "to": "framework/svelte/examples/fixed",
+              "label": "Fest"
+            },
+            {
+              "to": "framework/svelte/examples/variable",
+              "label": "Variabel"
+            },
+            {
+              "to": "framework/svelte/examples/dynamic",
+              "label": "Dynamisch"
+            },
+            {
+              "to": "framework/svelte/examples/sticky",
+              "label": "Fixiert"
+            },
+            {
+              "to": "framework/svelte/examples/infinite-scroll",
+              "label": "Unendliches Scrollen"
+            },
+            {
+              "to": "framework/svelte/examples/smooth-scroll",
+              "label": "Sanftes Scrollen"
+            },
+            {
+              "to": "framework/svelte/examples/table",
+              "label": "Tabelle"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "to": "framework/vue/examples/fixed",
+              "label": "Fest"
+            },
+            {
+              "to": "framework/vue/examples/variable",
+              "label": "Variabel"
+            },
+            {
+              "to": "framework/vue/examples/dynamic",
+              "label": "Dynamisch"
+            },
+            {
+              "to": "framework/vue/examples/sticky",
+              "label": "Fixiert"
+            },
+            {
+              "to": "framework/vue/examples/infinite-scroll",
+              "label": "Unendliches Scrollen"
+            },
+            {
+              "to": "framework/vue/examples/smooth-scroll",
+              "label": "Sanftes Scrollen"
+            },
+            {
+              "to": "framework/vue/examples/table",
+              "label": "Tabelle"
+            },
+            {
+              "to": "framework/vue/examples/padding",
+              "label": "Polsterung"
+            },
+            {
+              "to": "framework/vue/examples/scroll-padding",
+              "label": "Scroll-Polsterung"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "to": "framework/lit/examples/fixed",
+              "label": "Fest"
+            },
+            {
+              "to": "framework/lit/examples/dynamic",
+              "label": "Dynamisch"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
