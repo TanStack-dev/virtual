@@ -1,0 +1,258 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TanStack/tanstack.com/main/tanstack-docs-config.schema.json",
+  "docSearch": {
+    "appId": "",
+    "indexName": "",
+    "apiKey": ""
+  },
+  "sections": [
+    {
+      "label": "Начало работы",
+      "children": [
+        {
+          "label": "Введение",
+          "to": "introduction"
+        },
+        {
+          "label": "Установка",
+          "to": "installation"
+        }
+      ],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "React Virtual",
+              "to": "framework/react/react-virtual"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "Angular Virtual",
+              "to": "framework/angular/angular-virtual"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "Solid Virtual",
+              "to": "framework/solid/solid-virtual"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "Svelte Virtual",
+              "to": "framework/svelte/svelte-virtual"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "Vue Virtual",
+              "to": "framework/vue/vue-virtual"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Основные API",
+      "children": [
+        {
+          "label": "Виртуализатор",
+          "to": "api/virtualizer"
+        },
+        {
+          "label": "Виртуальный элемент",
+          "to": "api/virtual-item"
+        }
+      ]
+    },
+    {
+      "label": "Примеры",
+      "children": [],
+      "frameworks": [
+        {
+          "label": "angular",
+          "children": [
+            {
+              "to": "framework/angular/examples/fixed",
+              "label": "Фиксированный"
+            },
+            {
+              "to": "framework/angular/examples/variable",
+              "label": "Переменный"
+            },
+            {
+              "to": "framework/angular/examples/dynamic",
+              "label": "Динамический"
+            },
+            {
+              "to": "framework/angular/examples/padding",
+              "label": "Отступы"
+            },
+            {
+              "to": "framework/angular/examples/sticky",
+              "label": "Закрепленный"
+            },
+            {
+              "to": "framework/angular/examples/infinite-scroll",
+              "label": "Бесконечная прокрутка"
+            },
+            {
+              "to": "framework/angular/examples/smooth-scroll",
+              "label": "Плавная прокрутка"
+            },
+            {
+              "to": "framework/angular/examples/table",
+              "label": "Таблица"
+            },
+            {
+              "to": "framework/angular/examples/window",
+              "label": "Окно"
+            }
+          ]
+        },
+        {
+          "label": "react",
+          "children": [
+            {
+              "to": "framework/react/examples/fixed",
+              "label": "Фиксированный"
+            },
+            {
+              "to": "framework/react/examples/variable",
+              "label": "Переменный"
+            },
+            {
+              "to": "framework/react/examples/dynamic",
+              "label": "Динамический"
+            },
+            {
+              "to": "framework/react/examples/padding",
+              "label": "Отступы"
+            },
+            {
+              "to": "framework/react/examples/sticky",
+              "label": "Закрепленный"
+            },
+            {
+              "to": "framework/react/examples/infinite-scroll",
+              "label": "Бесконечная прокрутка"
+            },
+            {
+              "to": "framework/react/examples/smooth-scroll",
+              "label": "Плавная прокрутка"
+            },
+            {
+              "to": "framework/react/examples/table",
+              "label": "Таблица"
+            },
+            {
+              "to": "framework/react/examples/window",
+              "label": "Окно"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "to": "framework/svelte/examples/fixed",
+              "label": "Фиксированный"
+            },
+            {
+              "to": "framework/svelte/examples/variable",
+              "label": "Переменный"
+            },
+            {
+              "to": "framework/svelte/examples/dynamic",
+              "label": "Динамический"
+            },
+            {
+              "to": "framework/svelte/examples/sticky",
+              "label": "Закрепленный"
+            },
+            {
+              "to": "framework/svelte/examples/infinite-scroll",
+              "label": "Бесконечная прокрутка"
+            },
+            {
+              "to": "framework/svelte/examples/smooth-scroll",
+              "label": "Плавная прокрутка"
+            },
+            {
+              "to": "framework/svelte/examples/table",
+              "label": "Таблица"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "to": "framework/vue/examples/fixed",
+              "label": "Фиксированный"
+            },
+            {
+              "to": "framework/vue/examples/variable",
+              "label": "Переменный"
+            },
+            {
+              "to": "framework/vue/examples/dynamic",
+              "label": "Динамический"
+            },
+            {
+              "to": "framework/vue/examples/sticky",
+              "label": "Закрепленный"
+            },
+            {
+              "to": "framework/vue/examples/infinite-scroll",
+              "label": "Бесконечная прокрутка"
+            },
+            {
+              "to": "framework/vue/examples/smooth-scroll",
+              "label": "Плавная прокрутка"
+            },
+            {
+              "to": "framework/vue/examples/table",
+              "label": "Таблица"
+            },
+            {
+              "to": "framework/vue/examples/padding",
+              "label": "Отступы"
+            },
+            {
+              "to": "framework/vue/examples/scroll-padding",
+              "label": "Отступы прокрутки"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "to": "framework/lit/examples/fixed",
+              "label": "Фиксированный"
+            },
+            {
+              "to": "framework/lit/examples/dynamic",
+              "label": "Динамический"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

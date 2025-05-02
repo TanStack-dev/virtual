@@ -1,0 +1,258 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TanStack/tanstack.com/main/tanstack-docs-config.schema.json",
+  "docSearch": {
+    "appId": "",
+    "indexName": "",
+    "apiKey": ""
+  },
+  "sections": [
+    {
+      "label": "Premiers pas",
+      "children": [
+        {
+          "label": "Introduction",
+          "to": "introduction"
+        },
+        {
+          "label": "Installation",
+          "to": "installation"
+        }
+      ],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "React Virtual",
+              "to": "framework/react/react-virtual"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "Angular Virtual",
+              "to": "framework/angular/angular-virtual"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "Solid Virtual",
+              "to": "framework/solid/solid-virtual"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "Svelte Virtual",
+              "to": "framework/svelte/svelte-virtual"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "Vue Virtual",
+              "to": "framework/vue/vue-virtual"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "API principales",
+      "children": [
+        {
+          "label": "Virtualizer",
+          "to": "api/virtualizer"
+        },
+        {
+          "label": "VirtualItem",
+          "to": "api/virtual-item"
+        }
+      ]
+    },
+    {
+      "label": "Exemples",
+      "children": [],
+      "frameworks": [
+        {
+          "label": "angular",
+          "children": [
+            {
+              "to": "framework/angular/examples/fixed",
+              "label": "Fixe"
+            },
+            {
+              "to": "framework/angular/examples/variable",
+              "label": "Variable"
+            },
+            {
+              "to": "framework/angular/examples/dynamic",
+              "label": "Dynamique"
+            },
+            {
+              "to": "framework/angular/examples/padding",
+              "label": "Rembourrage"
+            },
+            {
+              "to": "framework/angular/examples/sticky",
+              "label": "Collant"
+            },
+            {
+              "to": "framework/angular/examples/infinite-scroll",
+              "label": "Défilement infini"
+            },
+            {
+              "to": "framework/angular/examples/smooth-scroll",
+              "label": "Défilement fluide"
+            },
+            {
+              "to": "framework/angular/examples/table",
+              "label": "Tableau"
+            },
+            {
+              "to": "framework/angular/examples/window",
+              "label": "Fenêtre"
+            }
+          ]
+        },
+        {
+          "label": "react",
+          "children": [
+            {
+              "to": "framework/react/examples/fixed",
+              "label": "Fixe"
+            },
+            {
+              "to": "framework/react/examples/variable",
+              "label": "Variable"
+            },
+            {
+              "to": "framework/react/examples/dynamic",
+              "label": "Dynamique"
+            },
+            {
+              "to": "framework/react/examples/padding",
+              "label": "Rembourrage"
+            },
+            {
+              "to": "framework/react/examples/sticky",
+              "label": "Collant"
+            },
+            {
+              "to": "framework/react/examples/infinite-scroll",
+              "label": "Défilement infini"
+            },
+            {
+              "to": "framework/react/examples/smooth-scroll",
+              "label": "Défilement fluide"
+            },
+            {
+              "to": "framework/react/examples/table",
+              "label": "Tableau"
+            },
+            {
+              "to": "framework/react/examples/window",
+              "label": "Fenêtre"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "to": "framework/svelte/examples/fixed",
+              "label": "Fixe"
+            },
+            {
+              "to": "framework/svelte/examples/variable",
+              "label": "Variable"
+            },
+            {
+              "to": "framework/svelte/examples/dynamic",
+              "label": "Dynamique"
+            },
+            {
+              "to": "framework/svelte/examples/sticky",
+              "label": "Collant"
+            },
+            {
+              "to": "framework/svelte/examples/infinite-scroll",
+              "label": "Défilement infini"
+            },
+            {
+              "to": "framework/svelte/examples/smooth-scroll",
+              "label": "Défilement fluide"
+            },
+            {
+              "to": "framework/svelte/examples/table",
+              "label": "Tableau"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "to": "framework/vue/examples/fixed",
+              "label": "Fixe"
+            },
+            {
+              "to": "framework/vue/examples/variable",
+              "label": "Variable"
+            },
+            {
+              "to": "framework/vue/examples/dynamic",
+              "label": "Dynamique"
+            },
+            {
+              "to": "framework/vue/examples/sticky",
+              "label": "Collant"
+            },
+            {
+              "to": "framework/vue/examples/infinite-scroll",
+              "label": "Défilement infini"
+            },
+            {
+              "to": "framework/vue/examples/smooth-scroll",
+              "label": "Défilement fluide"
+            },
+            {
+              "to": "framework/vue/examples/table",
+              "label": "Tableau"
+            },
+            {
+              "to": "framework/vue/examples/padding",
+              "label": "Rembourrage"
+            },
+            {
+              "to": "framework/vue/examples/scroll-padding",
+              "label": "Rembourrage de défilement"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "to": "framework/lit/examples/fixed",
+              "label": "Fixe"
+            },
+            {
+              "to": "framework/lit/examples/dynamic",
+              "label": "Dynamique"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

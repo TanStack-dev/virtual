@@ -1,0 +1,258 @@
+{
+  "$schema": "https://raw.githubusercontent.com/TanStack/tanstack.com/main/tanstack-docs-config.schema.json",
+  "docSearch": {
+    "appId": "",
+    "indexName": "",
+    "apiKey": ""
+  },
+  "sections": [
+    {
+      "label": "はじめに",
+      "children": [
+        {
+          "label": "イントロダクション",
+          "to": "introduction"
+        },
+        {
+          "label": "インストール",
+          "to": "installation"
+        }
+      ],
+      "frameworks": [
+        {
+          "label": "react",
+          "children": [
+            {
+              "label": "React Virtual",
+              "to": "framework/react/react-virtual"
+            }
+          ]
+        },
+        {
+          "label": "angular",
+          "children": [
+            {
+              "label": "Angular Virtual",
+              "to": "framework/angular/angular-virtual"
+            }
+          ]
+        },
+        {
+          "label": "solid",
+          "children": [
+            {
+              "label": "Solid Virtual",
+              "to": "framework/solid/solid-virtual"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "label": "Svelte Virtual",
+              "to": "framework/svelte/svelte-virtual"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "label": "Vue Virtual",
+              "to": "framework/vue/vue-virtual"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "コアAPI",
+      "children": [
+        {
+          "label": "バーチャライザー",
+          "to": "api/virtualizer"
+        },
+        {
+          "label": "バーチャルアイテム",
+          "to": "api/virtual-item"
+        }
+      ]
+    },
+    {
+      "label": "例",
+      "children": [],
+      "frameworks": [
+        {
+          "label": "angular",
+          "children": [
+            {
+              "to": "framework/angular/examples/fixed",
+              "label": "固定"
+            },
+            {
+              "to": "framework/angular/examples/variable",
+              "label": "可変"
+            },
+            {
+              "to": "framework/angular/examples/dynamic",
+              "label": "動的"
+            },
+            {
+              "to": "framework/angular/examples/padding",
+              "label": "パディング"
+            },
+            {
+              "to": "framework/angular/examples/sticky",
+              "label": "スティッキー"
+            },
+            {
+              "to": "framework/angular/examples/infinite-scroll",
+              "label": "無限スクロール"
+            },
+            {
+              "to": "framework/angular/examples/smooth-scroll",
+              "label": "スムーススクロール"
+            },
+            {
+              "to": "framework/angular/examples/table",
+              "label": "テーブル"
+            },
+            {
+              "to": "framework/angular/examples/window",
+              "label": "ウィンドウ"
+            }
+          ]
+        },
+        {
+          "label": "react",
+          "children": [
+            {
+              "to": "framework/react/examples/fixed",
+              "label": "固定"
+            },
+            {
+              "to": "framework/react/examples/variable",
+              "label": "可変"
+            },
+            {
+              "to": "framework/react/examples/dynamic",
+              "label": "動的"
+            },
+            {
+              "to": "framework/react/examples/padding",
+              "label": "パディング"
+            },
+            {
+              "to": "framework/react/examples/sticky",
+              "label": "スティッキー"
+            },
+            {
+              "to": "framework/react/examples/infinite-scroll",
+              "label": "無限スクロール"
+            },
+            {
+              "to": "framework/react/examples/smooth-scroll",
+              "label": "スムーススクロール"
+            },
+            {
+              "to": "framework/react/examples/table",
+              "label": "テーブル"
+            },
+            {
+              "to": "framework/react/examples/window",
+              "label": "ウィンドウ"
+            }
+          ]
+        },
+        {
+          "label": "svelte",
+          "children": [
+            {
+              "to": "framework/svelte/examples/fixed",
+              "label": "固定"
+            },
+            {
+              "to": "framework/svelte/examples/variable",
+              "label": "可変"
+            },
+            {
+              "to": "framework/svelte/examples/dynamic",
+              "label": "動的"
+            },
+            {
+              "to": "framework/svelte/examples/sticky",
+              "label": "スティッキー"
+            },
+            {
+              "to": "framework/svelte/examples/infinite-scroll",
+              "label": "無限スクロール"
+            },
+            {
+              "to": "framework/svelte/examples/smooth-scroll",
+              "label": "スムーススクロール"
+            },
+            {
+              "to": "framework/svelte/examples/table",
+              "label": "テーブル"
+            }
+          ]
+        },
+        {
+          "label": "vue",
+          "children": [
+            {
+              "to": "framework/vue/examples/fixed",
+              "label": "固定"
+            },
+            {
+              "to": "framework/vue/examples/variable",
+              "label": "可変"
+            },
+            {
+              "to": "framework/vue/examples/dynamic",
+              "label": "動的"
+            },
+            {
+              "to": "framework/vue/examples/sticky",
+              "label": "スティッキー"
+            },
+            {
+              "to": "framework/vue/examples/infinite-scroll",
+              "label": "無限スクロール"
+            },
+            {
+              "to": "framework/vue/examples/smooth-scroll",
+              "label": "スムーススクロール"
+            },
+            {
+              "to": "framework/vue/examples/table",
+              "label": "テーブル"
+            },
+            {
+              "to": "framework/vue/examples/padding",
+              "label": "パディング"
+            },
+            {
+              "to": "framework/vue/examples/scroll-padding",
+              "label": "スクロールパディング"
+            }
+          ]
+        },
+        {
+          "label": "lit",
+          "children": [
+            {
+              "to": "framework/lit/examples/fixed",
+              "label": "固定"
+            },
+            {
+              "to": "framework/lit/examples/dynamic",
+              "label": "動的"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
