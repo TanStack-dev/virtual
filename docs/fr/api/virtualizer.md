@@ -1,6 +1,6 @@
 ---
-source-updated-at: '2025-03-13T14:46:17.000Z'
-translation-updated-at: '2025-05-02T20:44:38.365Z'
+source-updated-at: '2025-05-05T15:05:35.000Z'
+translation-updated-at: '2025-05-06T23:10:21.592Z'
 title: Virtualizer
 ---
 # Virtualizer
@@ -13,7 +13,7 @@ export class Virtualizer<TScrollElement = unknown, TItemElement = unknown> {
 }
 ```
 
-## Options requises
+## Options obligatoires
 
 ### `count`
 
@@ -75,7 +75,7 @@ onChange?: (instance: Virtualizer<TScrollElement, TItemElement>, sync: boolean) 
 
 Une fonction de rappel qui se déclenche lorsque l'état interne du virtualizer change. Elle reçoit l'instance du virtualizer et le paramètre sync.
 
-Le paramètre sync indique si un défilement est en cours. Il est à `true` lorsque le défilement est en cours, et `false` lorsque le défilement s'est arrêté ou que d'autres actions (comme un redimensionnement) sont effectuées.
+Le paramètre sync indique si le défilement est en cours. Il est `true` lorsque le défilement est en cours, et `false` lorsque le défilement est arrêté ou que d'autres actions (comme un redimensionnement) sont en cours.
 
 ### `overscan`
 
@@ -83,7 +83,7 @@ Le paramètre sync indique si un défilement est en cours. Il est à `true` lors
 overscan?: number
 ```
 
-Le nombre d'éléments à rendre au-dessus et en dessous de la zone visible. Augmenter ce nombre augmentera le temps nécessaire pour rendre le virtualizer, mais pourrait réduire la probabilité de voir des éléments vides à rendu lent en haut et en bas du virtualizer lors du défilement.
+Le nombre d'éléments à rendre au-dessus et en dessous de la zone visible. Augmenter ce nombre augmentera le temps nécessaire pour rendre le virtualizer, mais pourrait réduire la probabilité de voir des éléments vides à rendu lent en haut et en bas du virtualizer lors du défilement. La valeur par défaut est `1`.
 
 ### `horizontal`
 
@@ -131,7 +131,7 @@ Le padding à appliquer à la fin du virtualizer en pixels lors du défilement v
 initialOffset?: number | (() => number)
 ```
 
-Le décalage initial à appliquer au virtualizer. Ceci n'est généralement utile que si vous rendez le virtualizer dans un environnement SSR.
+L'offset initial à appliquer au virtualizer. Ceci n'est généralement utile que si vous rendez le virtualizer dans un environnement SSR.
 
 ### `getItemKey`
 
@@ -139,7 +139,7 @@ Le décalage initial à appliquer au virtualizer. Ceci n'est généralement util
 getItemKey?: (index: number) => Key
 ```
 
-Cette fonction reçoit l'index de chaque élément et doit retourner une clé unique pour cet élément. La fonctionnalité par défaut de cette fonction est de retourner l'index de l'élément, mais vous devriez la remplacer si possible pour retourner un identifiant unique pour chaque élément dans l'ensemble complet. Cette fonction devrait être mémoïsée pour éviter des rendus inutiles.
+Cette fonction reçoit l'index de chaque élément et doit retourner une clé unique pour cet élément. La fonctionnalité par défaut de cette fonction est de retourner l'index de l'élément, mais vous devriez la remplacer si possible pour retourner un identifiant unique pour chaque élément dans l'ensemble complet. Cette fonction doit être mémoïsée pour éviter des rendus inutiles.
 
 ### `rangeExtractor`
 
@@ -147,7 +147,7 @@ Cette fonction reçoit l'index de chaque élément et doit retourner une clé un
 rangeExtractor?: (range: Range) => number[]
 ```
 
-Cette fonction reçoit les index de la plage visible et doit retourner un tableau d'index à rendre. Ceci est utile si vous avez besoin d'ajouter ou de supprimer des éléments du virtualizer manuellement indépendamment de la plage visible, par exemple pour rendre des éléments fixes, des en-têtes, des pieds de page, etc. L'implémentation par défaut de l'extracteur de plage retournera les index de la plage visible et est exportée sous le nom `defaultRangeExtractor`.
+Cette fonction reçoit les index de la plage visible et doit retourner un tableau d'index à rendre. Ceci est utile si vous avez besoin d'ajouter ou de supprimer des éléments du virtualizer manuellement indépendamment de la plage visible, par exemple pour rendre des éléments fixes, des en-têtes, des pieds de page, etc. L'implémentation par défaut de l'extracteur de plage retourne les index de la plage visible et est exportée sous le nom `defaultRangeExtractor`.
 
 ### `scrollToFn`
 
@@ -178,7 +178,7 @@ observeElementRect: (
 ) => void | (() => void)
 ```
 
-Une fonction optionnelle qui, si fournie, est appelée lorsque le scrollElement change et doit implémenter la mesure initiale et la surveillance continue du `Rect` du scrollElement (un objet avec `width` et `height`). Elle est appelée avec l'instance (qui vous donne également accès au scrollElement via `instance.scrollElement`). Les implémentations intégrées sont exportées sous les noms `observeElementRect` et `observeWindowRect` qui sont automatiquement configurées pour vous par les fonctions exportées de votre adaptateur de framework comme `useVirtualizer` ou `useWindowVirtualizer`.
+Une fonction optionnelle qui, si elle est fournie, est appelée lorsque le scrollElement change et doit implémenter la mesure initiale et la surveillance continue du `Rect` du scrollElement (un objet avec `width` et `height`). Elle est appelée avec l'instance (qui vous donne également accès au scrollElement via `instance.scrollElement`). Les implémentations intégrées sont exportées sous les noms `observeElementRect` et `observeWindowRect` et sont automatiquement configurées pour vous par les fonctions exportées de votre adaptateur de framework comme `useVirtualizer` ou `useWindowVirtualizer`.
 
 ### `observeElementOffset`
 
@@ -189,7 +189,7 @@ observeElementOffset: (
   ) => void | (() => void)
 ```
 
-Une fonction optionnelle qui, si fournie, est appelée lorsque le scrollElement change et doit implémenter la mesure initiale et la surveillance continue du décalage de défilement du scrollElement (un nombre). Elle est appelée avec l'instance (qui vous donne également accès au scrollElement via `instance.scrollElement`). Les implémentations intégrées sont exportées sous les noms `observeElementOffset` et `observeWindowOffset` qui sont automatiquement configurées pour vous par les fonctions exportées de votre adaptateur de framework comme `useVirtualizer` ou `useWindowVirtualizer`.
+Une fonction optionnelle qui, si elle est fournie, est appelée lorsque le scrollElement change et doit implémenter la mesure initiale et la surveillance continue de l'offset de défilement du scrollElement (un nombre). Elle est appelée avec l'instance (qui vous donne également accès au scrollElement via `instance.scrollElement`). Les implémentations intégrées sont exportées sous les noms `observeElementOffset` et `observeWindowOffset` et sont automatiquement configurées pour vous par les fonctions exportées de votre adaptateur de framework comme `useVirtualizer` ou `useWindowVirtualizer`.
 
 ### `measureElement`
 
@@ -211,7 +211,7 @@ Cette fonction optionnelle est appelée lorsque le virtualizer a besoin de mesur
 scrollMargin?: number
 ```
 
-Avec cette option, vous pouvez spécifier d'où doit provenir le décalage de défilement. Typiquement, cette valeur représente l'espace entre le début de l'élément de défilement et le début de la liste. Ceci est particulièrement utile dans des scénarios courants comme lorsque vous avez un en-tête précédant un virtualizer de fenêtre ou lorsque plusieurs virtualizers sont utilisés dans un seul élément de défilement. Si vous utilisez le positionnement absolu des éléments, vous devez prendre en compte le `scrollMargin` dans votre transformation CSS :
+Avec cette option, vous pouvez spécifier d'où doit provenir l'offset de défilement. Typiquement, cette valeur représente l'espace entre le début de l'élément scrollable et le début de la liste. Ceci est particulièrement utile dans des scénarios courants comme lorsque vous avez un en-tête précédant un virtualizer de fenêtre ou lorsque plusieurs virtualizers sont utilisés dans un seul élément scrollable. Si vous utilisez un positionnement absolu des éléments, vous devez prendre en compte le `scrollMargin` dans votre transformation CSS :
 ```tsx
 transform: `translateY(${
    virtualRow.start - rowVirtualizer.options.scrollMargin
@@ -241,7 +241,7 @@ Le nombre de voies dans lesquelles la liste est divisée (également appelées c
 isScrollingResetDelay: number
 ```
 
-Cette option vous permet de spécifier la durée à attendre après le dernier événement de défilement avant de réinitialiser la propriété d'instance isScrolling. La valeur par défaut est 150 millisecondes.
+Cette option vous permet de spécifier la durée à attendre après le dernier événement de défilement avant de réinitialiser la propriété isScrolling de l'instance. La valeur par défaut est 150 millisecondes.
 
 L'implémentation de cette option est motivée par le besoin d'un mécanisme fiable pour gérer le comportement de défilement sur différents navigateurs. Jusqu'à ce que tous les navigateurs prennent en charge uniformément l'événement scrollEnd.
 
@@ -251,7 +251,7 @@ L'implémentation de cette option est motivée par le besoin d'un mécanisme fia
 useScrollendEvent: boolean
 ```
 
-Détermine s'il faut utiliser l'événement natif scrollend pour détecter quand le défilement s'est arrêté. Si défini à false, une solution de repli avec debounce est utilisée pour réinitialiser la propriété d'instance isScrolling après isScrollingResetDelay millisecondes. La valeur par défaut est `false`.
+Détermine s'il faut utiliser l'événement natif scrollend pour détecter quand le défilement s'est arrêté. Si défini à false, un fallback avec debounce est utilisé pour réinitialiser la propriété isScrolling de l'instance après isScrollingResetDelay millisecondes. La valeur par défaut est `false`.
 
 L'implémentation de cette option est motivée par le besoin d'un mécanisme fiable pour gérer le comportement de défilement sur différents navigateurs. Jusqu'à ce que tous les navigateurs prennent en charge uniformément l'événement scrollEnd.
 
@@ -261,7 +261,7 @@ L'implémentation de cette option est motivée par le besoin d'un mécanisme fia
 isRtl: boolean
 ```
 
-Détermine s'il faut inverser le défilement horizontal pour prendre en charge les locales de langue droite-à-gauche.
+Détermine s'il faut inverser le défilement horizontal pour prendre en charge les locales de langue de droite à gauche.
 
 ### `useAnimationFrameWithResizeObserver`
 
@@ -269,9 +269,9 @@ Détermine s'il faut inverser le défilement horizontal pour prendre en charge l
 useAnimationFrameWithResizeObserver: boolean
 ```
 
-Cette option permet d'encapsuler les mesures de ResizeObserver dans requestAnimationFrame pour des mises à jour plus fluides et une réduction des conflits de layout. La valeur par défaut est `false`.
+Cette option permet d'encapsuler les mesures de ResizeObserver dans requestAnimationFrame pour des mises à jour plus fluides et une réduction du layout thrashing. La valeur par défaut est `false`.
 
-Elle aide à prévenir l'erreur "ResizeObserver loop completed with undelivered notifications" en s'assurant que les mesures s'alignent avec le cycle de rendu. Cela peut améliorer les performances et réduire les saccades de l'interface, surtout lors du redimensionnement dynamique des éléments. Cependant, comme ResizeObserver s'exécute déjà de manière asynchrone, l'ajout de requestAnimationFrame peut introduire un léger délai dans les mesures, qui pourrait être perceptible dans certains cas. Si les opérations de redimensionnement sont légères et ne provoquent pas de reflows, activer cette option peut ne pas apporter d'avantages significatifs.
+Elle aide à prévenir l'erreur "ResizeObserver loop completed with undelivered notifications" en s'assurant que les mesures s'alignent avec le cycle de rendu. Cela peut améliorer les performances et réduire les saccades de l'interface, surtout lors du redimensionnement dynamique d'éléments. Cependant, comme ResizeObserver s'exécute déjà de manière asynchrone, l'ajout de requestAnimationFrame peut introduire un léger délai dans les mesures, qui pourrait être perceptible dans certains cas. Si les opérations de redimensionnement sont légères et ne provoquent pas de reflows, activer cette option pourrait ne pas apporter de bénéfices significatifs.
 
 ## Instance de Virtualizer
 
@@ -283,7 +283,7 @@ Les propriétés et méthodes suivantes sont disponibles sur l'instance du virtu
 options: readonly Required<VirtualizerOptions<TScrollElement, TItemElement>>
 ```
 
-Les options actuelles pour le virtualizer. Cette propriété est mise à jour via votre adaptateur de framework et est en lecture seule.
+Les options actuelles du virtualizer. Cette propriété est mise à jour via votre adaptateur de framework et est en lecture seule.
 
 ### `scrollElement`
 
@@ -291,7 +291,7 @@ Les options actuelles pour le virtualizer. Cette propriété est mise à jour vi
 scrollElement: readonly TScrollElement | null
 ```
 
-Le scrollElement actuel pour le virtualizer. Cette propriété est mise à jour via votre adaptateur de framework et est en lecture seule.
+Le scrollElement actuel du virtualizer. Cette propriété est mise à jour via votre adaptateur de framework et est en lecture seule.
 
 ### `getVirtualItems`
 
@@ -321,7 +321,7 @@ scrollToOffset: (
 ) => void
 ```
 
-Fait défiler le virtualizer jusqu'au décalage en pixels fourni. Vous pouvez optionnellement passer un mode d'alignement pour ancrer le défilement à une partie spécifique du scrollElement.
+Fait défiler le virtualizer vers l'offset en pixels fourni. Vous pouvez optionnellement passer un mode d'alignement pour ancrer le défilement à une partie spécifique du scrollElement.
 
 ### `scrollToIndex`
 
@@ -335,7 +335,7 @@ scrollToIndex: (
 ) => void
 ```
 
-Fait défiler le virtualizer jusqu'à l'élément de l'index fourni. Vous pouvez optionnellement passer un mode d'alignement pour ancrer le défilement à une partie spécifique du scrollElement.
+Fait défiler le virtualizer vers l'élément de l'index fourni. Vous pouvez optionnellement passer un mode d'alignement pour ancrer le défilement à une partie spécifique du scrollElement.
 
 ### `getTotalSize`
 
@@ -359,7 +359,7 @@ Réinitialise toutes les mesures précédentes des éléments.
 measureElement: (el: TItemElement | null) => void
 ```
 
-Mesure l'élément en utilisant votre option `measureElement` configurée pour le virtualizer. Vous êtes responsable d'appeler ceci dans votre balisage de virtualizer lorsque le composant est rendu (par exemple en utilisant quelque chose comme la prop de rappel ref de React) en ajoutant également `data-index`
+Mesure l'élément en utilisant votre option `measureElement` configurée du virtualizer. Vous êtes responsable d'appeler ceci dans votre balisage de virtualizer lorsque le composant est rendu (par exemple en utilisant quelque chose comme la prop de rappel ref de React) en ajoutant également `data-index`
 
 ```tsx
  <div
@@ -380,7 +380,7 @@ resizeItem: (index: number, size: number) => void
 
 Change manuellement la taille de l'élément virtualisé. Utilisez cette fonction pour définir manuellement la taille calculée pour cet index. Utile dans les cas où vous utilisez une transition de morphing personnalisée et que vous connaissez à l'avance la taille de l'élément morphé.
 
-Vous pouvez également utiliser cette méthode avec un ResizeObserver limité au lieu de `Virtualizer.measureElement` pour réduire le re-rendu.
+Vous pouvez également utiliser cette méthode avec un ResizeObserver throttlé au lieu de `Virtualizer.measureElement` pour réduire les re-rendus.
 
 > ⚠️ Soyez conscient que changer manuellement la taille d'un élément lors de l'utilisation de `Virtualizer.measureElement` pour surveiller cet élément entraînera un comportement imprévisible car `Virtualizer.measureElement` modifie également la taille. Cependant, vous pouvez utiliser l'une des méthodes resizeItem ou measureElement dans la même instance de virtualizer mais sur des index d'éléments différents.
 
@@ -390,7 +390,7 @@ Vous pouvez également utiliser cette méthode avec un ResizeObserver limité au
 scrollRect: Rect
 ```
 
-`Rect` actuel de l'élément de défilement.
+`Rect` actuel de l'élément scrollable.
 
 ### `shouldAdjustScrollPositionOnItemSizeChange`
 
@@ -406,7 +406,7 @@ La méthode shouldAdjustScrollPositionOnItemSizeChange permet un contrôle préc
 isScrolling: boolean
 ```
 
-Drapeau booléen indiquant si la liste est actuellement en cours de défilement.
+Indicateur booléen indiquant si la liste est actuellement en cours de défilement.
 
 ### `scrollDirection`
 
@@ -422,4 +422,4 @@ Cette option indique la direction du défilement, avec les valeurs possibles 'fo
 scrollOffset: number
 ```
 
-Cette option représente la position actuelle de défilement le long de l'axe de défilement. Elle est mesurée en pixels à partir du point de départ de la zone défilable.
+Cette option représente la position actuelle de défilement le long de l'axe de défilement. Elle est mesurée en pixels à partir du point de départ de la zone scrollable.
