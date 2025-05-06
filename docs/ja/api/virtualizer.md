@@ -1,9 +1,9 @@
 ---
-source-updated-at: '2025-03-13T14:46:17.000Z'
-translation-updated-at: '2025-05-02T20:32:55.069Z'
+source-updated-at: '2025-05-05T15:05:35.000Z'
+translation-updated-at: '2025-05-06T23:02:25.839Z'
 title: バーチャライザー
 ---
-`Virtualizer` クラスは TanStack Virtual のコアです。通常、Virtualizer インスタンスはフレームワークアダプタによって作成されますが、直接 virtualizer を受け取ることも可能です。
+`Virtualizer` クラスは TanStack Virtual のコアです。通常、Virtualizer インスタンスはフレームワークアダプタによって作成されますが、直接 virtualizer を受け取ることもできます。
 
 ```tsx
 export class Virtualizer<TScrollElement = unknown, TItemElement = unknown> {
@@ -35,9 +35,9 @@ virtualizer のスクロール可能な要素を返す関数。要素がまだ�
 estimateSize: (index: number) => number
 ```
 
-> 🧠 要素を動的に計測する場合、アイテムの可能な限り大きなサイズ（幅/高さ、適度な範囲内で）を推定することを推奨します。これにより、スムーズスクロールなどの機能が正しく動作する可能性が高まります。
+> 🧠 要素を動的に計測する場合、アイテムの可能な限り大きいサイズ（快適な範囲内での幅/高さ）を見積もることを推奨します。これにより、スムーズスクロールなどの機能が正しく動作する可能性が高まります。
 
-この関数には各アイテムのインデックスが渡され、各アイテムの実際のサイズ（または `virtualItem.measureElement` で動的に計測する場合は推定サイズ）を返す必要があります。この計測は、virtualizer の向きに応じて幅または高さを返す必要があります。
+この関数は各アイテムのインデックスを受け取り、各アイテムの実際のサイズ（または `virtualItem.measureElement` で動的に計測する場合は推定サイズ）を返す必要があります。この計測は、virtualizer の向きに応じて幅または高さを返す必要があります。
 
 ## オプション
 
@@ -47,7 +47,7 @@ estimateSize: (index: number) => number
 enabled?: boolean
 ```
 
-`false` に設定すると、scrollElement のオブザーバーが無効になり、virtualizer の状態がリセットされます。
+`false` に設定すると、scrollElement のオブザーバーが無効になり、virtualizer の状態がリセットされます
 
 ### `debug`
 
@@ -55,7 +55,7 @@ enabled?: boolean
 debug?: boolean
 ```
 
-`true` に設定するとデバッグログが有効になります。
+`true` に設定するとデバッグログが有効になります
 
 ### `initialRect`
 
@@ -73,7 +73,7 @@ onChange?: (instance: Virtualizer<TScrollElement, TItemElement>, sync: boolean) 
 
 virtualizer の内部状態が変化したときに発火するコールバック関数。virtualizer インスタンスと sync パラメータが渡されます。
 
-sync パラメータは、現在スクロール中かどうかを示します。スクロール中は `true`、スクロールが停止している場合やリサイズなどの他のアクションが実行されている場合は `false` になります。
+sync パラメータは、スクロールが現在進行中かどうかを示します。スクロール中は `true`、スクロールが停止したときやリサイズなどの他のアクションが実行されているときは `false` になります。
 
 ### `overscan`
 
@@ -81,7 +81,7 @@ sync パラメータは、現在スクロール中かどうかを示します。
 overscan?: number
 ```
 
-可視領域の上下にレンダリングするアイテム数。この数を増やすと virtualizer のレンダリング時間が増加しますが、スクロール時に virtualizer の上部や下部でレンダリングが遅い空白アイテムが表示される可能性が減少します。
+可視領域の上下にレンダリングするアイテムの数。この数を増やすと virtualizer のレンダリング時間が増加しますが、スクロール時に virtualizer の上部や下部でレンダリングが遅い空白アイテムが表示される可能性が減少します。デフォルト値は `1` です。
 
 ### `horizontal`
 
@@ -97,7 +97,7 @@ virtualizer が水平方向の場合、これを `true` に設定します。
 paddingStart?: number
 ```
 
-virtualizer の開始位置に適用するパディング（ピクセル単位）。
+virtualizer の開始部分に適用するパディング（ピクセル単位）。
 
 ### `paddingEnd`
 
@@ -105,7 +105,7 @@ virtualizer の開始位置に適用するパディング（ピクセル単位�
 paddingEnd?: number
 ```
 
-virtualizer の終了位置に適用するパディング（ピクセル単位）。
+virtualizer の終了部分に適用するパディング（ピクセル単位）。
 
 ### `scrollPaddingStart`
 
@@ -113,7 +113,7 @@ virtualizer の終了位置に適用するパディング（ピクセル単位�
 scrollPaddingStart?: number
 ```
 
-要素にスクロールする際に virtualizer の開始位置に適用するパディング（ピクセル単位）。
+要素にスクロールするときに virtualizer の開始部分に適用するパディング（ピクセル単位）。
 
 ### `scrollPaddingEnd`
 
@@ -121,7 +121,7 @@ scrollPaddingStart?: number
 scrollPaddingEnd?: number
 ```
 
-要素にスクロールする際に virtualizer の終了位置に適用するパディング（ピクセル単位）。
+要素にスクロールするときに virtualizer の終了部分に適用するパディング（ピクセル単位）。
 
 ### `initialOffset`
 
@@ -129,7 +129,7 @@ scrollPaddingEnd?: number
 initialOffset?: number | (() => number)
 ```
 
-virtualizer に適用する初期オフセット。主に SSR 環境で virtualizer をレンダリングする場合に有用です。
+virtualizer に適用する初期オフセット。通常、SSR 環境で virtualizer をレンダリングする場合にのみ有用です。
 
 ### `getItemKey`
 
@@ -137,7 +137,7 @@ virtualizer に適用する初期オフセット。主に SSR 環境で virtuali
 getItemKey?: (index: number) => Key
 ```
 
-この関数には各アイテムのインデックスが渡され、そのアイテムの一意のキーを返す必要があります。この関数のデフォルト機能はアイテムのインデックスを返すことですが、可能であれば全セットで各アイテムの一意の識別子を返すようにオーバーライドする必要があります。この関数は不必要な再レンダリングを防ぐためにメモ化する必要があります。
+この関数は各アイテムのインデックスを受け取り、そのアイテムの一意のキーを返す必要があります。この関数のデフォルト機能はアイテムのインデックスを返すことですが、可能であればセット全体で各アイテムの一意の識別子を返すようにオーバーライドする必要があります。この関数は不要な再レンダリングを防ぐためにメモ化する必要があります。
 
 ### `rangeExtractor`
 
@@ -145,7 +145,7 @@ getItemKey?: (index: number) => Key
 rangeExtractor?: (range: Range) => number[]
 ```
 
-この関数は可視範囲のインデックスを受け取り、レンダリングするインデックスの配列を返す必要があります。これは、可視範囲に関係なく手動でアイテムを追加または削除する必要がある場合（例: 固定アイテム、ヘッダー、フッターなど）に有用です。デフォルトの rangeExtractor 実装は可視範囲のインデックスを返し、`defaultRangeExtractor` としてエクスポートされています。
+この関数は可視範囲のインデックスを受け取り、レンダリングするインデックスの配列を返す必要があります。これは、可視範囲に関係なく手動でアイテムを追加または削除する必要がある場合（例: 固定アイテム、ヘッダー、フッターなどをレンダリングする場合）に有用です。デフォルトの range extractor 実装は可視範囲のインデックスを返し、`defaultRangeExtractor` としてエクスポートされます。
 
 ### `scrollToFn`
 
@@ -157,13 +157,13 @@ scrollToFn?: (
 ) => void
 ```
 
-オプションの関数で（提供された場合）、scrollElement のスクロール動作を実装する必要があります。以下の引数で呼び出されます:
+オプションの関数で、（提供されている場合）scrollElement のスクロール動作を実装する必要があります。以下の引数で呼び出されます:
 
 - スクロール先の `offset`（ピクセル単位）。
 - 推定サイズと実際のサイズの差 (`adjustments`) やスムーズアニメーションでスクロールが呼び出されたかどうか (`behaviour`) を示すオブジェクト。
 - virtualizer インスタンス自体。
 
-組み込みのスクロール実装は `elementScroll` および `windowScroll` としてエクスポートされており、`useVirtualizer` や `useWindowVirtualizer` などのフレームワークアダプタ関数によって自動的に設定されます。
+組み込みのスクロール実装は `elementScroll` および `windowScroll` としてエクスポートされており、`useVirtualizer` や `useWindowVirtualizer` などのフレームワークアダプタ関数によって自動的に構成されます。
 
 > ⚠️ 動的に計測される要素で smoothScroll を使用しようとしても動作しません。
 
@@ -176,7 +176,7 @@ observeElementRect: (
 ) => void | (() => void)
 ```
 
-オプションの関数で（提供された場合）、scrollElement が変更されたときに呼び出され、scrollElement の `Rect`（`width` と `height` を持つオブジェクト）の初期計測と継続的な監視を実装する必要があります。インスタンス（`instance.scrollElement` を介して scrollElement にもアクセス可能）とともに呼び出されます。組み込みの実装は `observeElementRect` および `observeWindowRect` としてエクスポートされており、`useVirtualizer` や `useWindowVirtualizer` などのフレームワークアダプタのエクスポート関数によって自動的に設定されます。
+オプションの関数で、（提供されている場合）scrollElement が変更されたときに呼び出され、scrollElement の `Rect`（`width` と `height` を持つオブジェクト）の初期計測と継続的な監視を実装する必要があります。インスタンス（`instance.scrollElement` を介して scrollElement にアクセス可能）とともに呼び出されます。組み込みの実装は `observeElementRect` および `observeWindowRect` としてエクスポートされており、`useVirtualizer` や `useWindowVirtualizer` などのフレームワークアダプタのエクスポート関数によって自動的に構成されます。
 
 ### `observeElementOffset`
 
@@ -187,7 +187,7 @@ observeElementOffset: (
   ) => void | (() => void)
 ```
 
-オプションの関数で（提供された場合）、scrollElement が変更されたときに呼び出され、scrollElement のスクロールオフセット（数値）の初期計測と継続的な監視を実装する必要があります。インスタンス（`instance.scrollElement` を介して scrollElement にもアクセス可能）とともに呼び出されます。組み込みの実装は `observeElementOffset` および `observeWindowOffset` としてエクスポートされており、`useVirtualizer` や `useWindowVirtualizer` などのフレームワークアダプタのエクスポート関数によって自動的に設定されます。
+オプションの関数で、（提供されている場合）scrollElement が変更されたときに呼び出され、scrollElement のスクロールオフセット（数値）の初期計測と継続的な監視を実装する必要があります。インスタンス（`instance.scrollElement` を介して scrollElement にアクセス可能）とともに呼び出されます。組み込みの実装は `observeElementOffset` および `observeWindowOffset` としてエクスポートされており、`useVirtualizer` や `useWindowVirtualizer` などのフレームワークアダプタのエクスポート関数によって自動的に構成されます。
 
 ### `measureElement`
 
@@ -199,9 +199,9 @@ measureElement?: (
 ) => number
 ```
 
-このオプションの関数は、virtualizer がアイテムのサイズ（幅または高さ）を動的に計測する必要があるときに呼び出されます。
+このオプション関数は、virtualizer がアイテムのサイズ（幅または高さ）を動的に計測する必要があるときに呼び出されます。
 
-> 🧠 `instance.options.horizontal` を使用して、アイテムの幅または高さのどちらを計測するかを決定できます。
+> 🧠 `instance.options.horizontal` を使用して、アイテムの幅または高さを計測するかどうかを判断できます。
 
 ### `scrollMargin`
 
@@ -209,7 +209,7 @@ measureElement?: (
 scrollMargin?: number
 ```
 
-このオプションを使用すると、スクロールオフセットの起点を指定できます。通常、この値はスクロール要素の開始位置とリストの開始位置との間のスペースを表します。これは、ウィンドウ virtualizer の前にヘッダーがある場合や、単一のスクロール要素内で複数の virtualizer が使用されている場合などの一般的なシナリオで特に有用です。要素を絶対配置する場合、CSS 変換で `scrollMargin` を考慮する必要があります:
+このオプションを使用すると、スクロールオフセットの起点を指定できます。通常、この値はスクロール要素の先頭とリストの開始位置の間のスペースを表します。これは、ウィンドウ virtualizer の前にヘッダーがある一般的なシナリオや、単一のスクロール要素内で複数の virtualizer が使用されている場合に特に有用です。要素を絶対位置指定で配置する場合は、CSS トランスフォームで `scrollMargin` を考慮する必要があります:
 ```tsx
 transform: `translateY(${
    virtualRow.start - rowVirtualizer.options.scrollMargin
@@ -223,7 +223,7 @@ transform: `translateY(${
 gap?: number
 ```
 
-このオプションを使用すると、仮想化リスト内のアイテム間の間隔を設定できます。各アイテムのマージンやパディングを手動で調整することなく、一貫した視覚的な間隔を維持するのに特に有用です。値はピクセル単位で指定します。
+このオプションを使用すると、仮想化リスト内のアイテム間のスペースを設定できます。各アイテムのマージンやパディングを手動で調整することなく、一貫した視覚的な間隔を維持するのに特に便利です。値はピクセル単位で指定します。
 
 ### `lanes`
 
@@ -241,7 +241,7 @@ isScrollingResetDelay: number
 
 このオプションを使用すると、最後のスクロールイベントから isScrolling インスタンスプロパティをリセットするまでの待機時間を指定できます。デフォルト値は 150 ミリ秒です。
 
-このオプションの実装は、異なるブラウザ間でスクロール動作を処理する信頼性の高いメカニズムの必要性に基づいています。すべてのブラウザが scrollEnd イベントを一様にサポートするまで必要です。
+このオプションの実装は、さまざまなブラウザ間でスクロール動作を処理する信頼性の高いメカニズムの必要性によって推進されています。すべてのブラウザが scrollEnd イベントを一様にサポートするまで。
 
 ### `useScrollendEvent`
 
@@ -249,9 +249,9 @@ isScrollingResetDelay: number
 useScrollendEvent: boolean
 ```
 
-スクロールが停止したことを検出するためにネイティブの scrollend イベントを使用するかどうかを決定します。`false` に設定すると、isScrollingResetDelay ミリ秒後に isScrolling インスタンスプロパティをリセットするためにデバウンスされたフォールバックが使用されます。デフォルト値は `false` です。
+スクロールが停止したことを検出するためにネイティブの scrollend イベントを使用するかどうかを決定します。false に設定すると、isScrollingResetDelay ミリ秒後に isScrolling インスタンスプロパティをリセットするためにデバウンスされたフォールバックが使用されます。デフォルト値は `false` です。
 
-このオプションの実装は、異なるブラウザ間でスクロール動作を処理する信頼性の高いメカニズムの必要性に基づいています。すべてのブラウザが scrollEnd イベントを一様にサポートするまで必要です。
+このオプションの実装は、さまざまなブラウザ間でスクロール動作を処理する信頼性の高いメカニズムの必要性によって推進されています。すべてのブラウザが scrollEnd イベントを一様にサポートするまで。
 
 ### `isRtl`
 
@@ -267,9 +267,9 @@ isRtl: boolean
 useAnimationFrameWithResizeObserver: boolean
 ```
 
-このオプションを有効にすると、ResizeObserver の計測を requestAnimationFrame でラップし、よりスムーズな更新とレイアウトスラッシングの削減を実現します。デフォルト値は `false` です。
+このオプションを有効にすると、ResizeObserver の計測を requestAnimationFrame でラップし、更新をスムーズにし、レイアウトスラッシングを減らします。デフォルト値は `false` です。
 
-これにより、計測がレンダリングサイクルに合わせることで、"ResizeObserver loop completed with undelivered notifications" エラーを防ぎます。これにより、特に要素を動的にリサイズする場合にパフォーマンスが向上し、UI のちらつきが減少します。ただし、ResizeObserver は既に非同期で実行されるため、requestAnimationFrame を追加すると計測にわずかな遅延が生じ、場合によっては目立つ可能性があります。リサイズ操作が軽量でリフローを引き起こさない場合、このオプションを有効にしても大きな利点は得られないかもしれません。
+これにより、計測がレンダリングサイクルに合わせられることで、"ResizeObserver loop completed with undelivered notifications" エラーを防ぐことができます。これは、特に要素を動的にリサイズする場合に、パフォーマンスを向上させ、UI のジャターを減らすことができます。ただし、ResizeObserver はすでに非同期で実行されるため、requestAnimationFrame を追加すると計測にわずかな遅延が生じ、場合によっては目立つ可能性があります。リサイズ操作が軽量でリフローを引き起こさない場合、このオプションを有効にしても大きな利点は得られない可能性があります。
 
 ## Virtualizer インスタンス
 
@@ -319,7 +319,7 @@ scrollToOffset: (
 ) => void
 ```
 
-virtualizer を指定されたピクセルオフセットまでスクロールします。オプションで、スクロールを scrollElement の特定の部分に固定するためのアラインモードを渡すことができます。
+virtualizer を指定されたピクセルオフセットにスクロールします。オプションで、スクロールを scrollElement の特定の部分にアンカーするためのアラインモードを渡すことができます。
 
 ### `scrollToIndex`
 
@@ -333,7 +333,7 @@ scrollToIndex: (
 ) => void
 ```
 
-virtualizer を指定されたインデックスのアイテムまでスクロールします。オプションで、スクロールを scrollElement の特定の部分に固定するためのアラインモードを渡すことができます。
+virtualizer を指定されたインデックスのアイテムにスクロールします。オプションで、スクロールを scrollElement の特定の部分にアンカーするためのアラインモードを渡すことができます。
 
 ### `getTotalSize`
 
@@ -357,7 +357,7 @@ measure: () => void
 measureElement: (el: TItemElement | null) => void
 ```
 
-設定された `measureElement` virtualizer オプションを使用して要素を計測します。コンポーネントがレンダリングされたときに（例: React の ref コールバックプロップを使用して）virtualizer マークアップでこれを呼び出す責任があります。また `data-index` を追加する必要があります。
+構成された `measureElement` virtualizer オプションを使用して要素を計測します。コンポーネントがレンダリングされたときに（例えば React の ref コールバックプロップを使用して）virtualizer マークアップでこれを呼び出す責任があります。また `data-index` を追加する必要があります。
 
 ```tsx
  <div
@@ -368,7 +368,7 @@ measureElement: (el: TItemElement | null) => void
 >...</div>
 ```
 
-デフォルトでは、`measureElement` virtualizer オプションは `getBoundingClientRect()` で要素を計測するように設定されています。
+デフォルトでは、`measureElement` virtualizer オプションは `getBoundingClientRect()` で要素を計測するように構成されています。
 
 ### `resizeItem`
 
@@ -376,11 +376,11 @@ measureElement: (el: TItemElement | null) => void
 resizeItem: (index: number, size: number) => void
 ```
 
-仮想化アイテムのサイズを手動で変更します。この関数を使用して、このインデックスに対して計算されたサイズを手動で設定します。カスタムモーフィングトランジションを使用していて、モーフィングされたアイテムのサイズを事前に知っている場合などに有用です。
+仮想化アイテムのサイズを手動で変更します。この関数を使用して、このインデックスに対して計算されたサイズを手動で設定します。カスタムモーフィングトランジションを使用していて、モーフィングされたアイテムのサイズを事前に知っている場合などに便利です。
 
 また、再レンダリングを減らすために、`Virtualizer.measureElement` の代わりにスロットルされた ResizeObserver とこのメソッドを使用することもできます。
 
-> ⚠️ `Virtualizer.measureElement` を使用してアイテムを監視しているときにアイテムのサイズを手動で変更すると、`Virtualizer.measureElement` もサイズを変更するため、予測不能な動作が発生します。ただし、同じ virtualizer インスタンスで resizeItem または measureElement のいずれかを異なるアイテムインデックスで使用することは可能です。
+> ⚠️ `Virtualizer.measureElement` を使用してアイテムを監視しているときにアイテムのサイズを手動で変更すると、`Virtualizer.measureElement` もサイズを変更するため、予測不可能な動作が発生します。ただし、同じ virtualizer インスタンスで resizeItem または measureElement のいずれかを異なるアイテムインデックスで使用することはできます。
 
 ### `scrollRect`
 
@@ -396,7 +396,7 @@ scrollRect: Rect
 shouldAdjustScrollPositionOnItemSizeChange: undefined | ((item: VirtualItem, delta: number, instance: Virtualizer<TScrollElement, TItemElement>) => boolean)
 ```
 
-shouldAdjustScrollPositionOnItemSizeChange メソッドは、動的にレンダリングされたアイテムのサイズが推定サイズと異なる場合のスクロール位置の調整を細かく制御できます。リストの途中にジャンプして後方にスクロールすると、新しい要素のサイズが最初に推定されたサイズと異なる場合があります。この不一致により、後続のアイテムがシフトし、特にリストを後方にナビゲートする際にユーザーのスクロール体験が乱れる可能性があります。
+shouldAdjustScrollPositionOnItemSizeChange メソッドは、動的にレンダリングされたアイテムのサイズが推定サイズと異なる場合に、スクロール位置の調整を細かく制御できます。リストの途中にジャンプして後方にスクロールすると、新しい要素のサイズが最初に推定されたサイズと異なる場合があります。この不一致により、後続のアイテムがシフトし、特にリストを後方にナビゲートするときにユーザーのスクロール体験が乱れる可能性があります。
 
 ### `isScrolling`
 
@@ -406,7 +406,4 @@ isScrolling: boolean
 
 リストが現在スクロール中かどうかを示すブール値フラグ。
 
-### `scrollDirection`
-
-```tsx
-scrollDirection: 'forward' | 'backward' |
+### `
