@@ -1,6 +1,6 @@
 {
   "name": "@tanstack/solid-virtual",
-  "version": "3.13.6",
+  "version": "3.13.8",
   "description": "Headless UI for virtualizing scrollable elements in Solid",
   "author": "Tanner Linsley",
   "license": "MIT",
@@ -55,7 +55,7 @@
     "@tanstack/virtual-core": "workspace:*"
   },
   "devDependencies": {
-    "solid-js": "^1.9.5",
+    "solid-js": "^1.9.6",
     "vite-plugin-solid": "^2.11.6"
   },
   "peerDependencies": {
